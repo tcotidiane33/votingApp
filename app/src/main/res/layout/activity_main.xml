@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"/>
+
+
+    <ImageView
+        android:id="@+id/iphone"
+        android:layout_width="match_parent"
+        android:layout_height="780dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/cinqetudiants_foreground"
+        android:layout_marginTop="0dp" />
+    <ImageView
+        android:id="@+id/connexion_image"
+        android:layout_width="match_parent"
+        android:layout_height="450sp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="25dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:background="@drawable/connexion_image_background"
+       />
+
+    <ImageView
+        android:id="@+id/profil_image"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="150dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:text="NOTRE DELEGUE"
+            android:textColor="#2196F3"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:typeface="serif">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="95dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/best_profil_round"
+        />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="170dp"
+        android:background="#00EDEFEF"
+        android:src="@mipmap/champ_connexion_round" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="235dp"
+        android:background="#00D5D5D5"
+        android:src="@mipmap/icon_mdp_round" />
+
+
+    <EditText
+        android:id="@+id/id_permane"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Votre identifiant permanent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-411dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/remenber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="69dp"
+            android:layout_marginTop="280dp"
+            android:text="se souvenir de moi" />
+
+        <Button
+            android:id="@+id/forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="Mot de passe oublié"
+            android:textColor="#03A9F4" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="235dp"
+        android:inputType="textPassword"
+         />
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:layout_marginTop="316dp"
+        android:layout_marginLeft="105dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
