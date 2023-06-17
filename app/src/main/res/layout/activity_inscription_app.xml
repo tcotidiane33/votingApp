@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".inscription_app">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"/>
+
+
+    <ImageView
+        android:id="@+id/iphone"
+        android:layout_width="match_parent"
+        android:layout_height="780dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/cinqetudiants_foreground"
+        android:layout_marginTop="0dp" />
+    <ImageView
+        android:id="@+id/connexion_image"
+        android:layout_width="match_parent"
+        android:layout_height="450sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="25dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:background="@drawable/connexion_image_background"
+        />
+
+    <ImageView
+        android:id="@+id/profil_image"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="150dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:text="NOTRE DELEGUE"
+            android:textColor="#FF9800"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:typeface="serif">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:textColorHint="#4CAF50"
+            android:textColor="#4CAF50"
+            android:text="ID. Etudiant:"
+            android:layout_marginTop="200dp"
+            android:typeface="serif">
+
+        </TextView>
+        <EditText
+            android:id="@+id/id_permane"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="195dp"
+            android:backgroundTint="#FF9800"
+            android:ems="10"
+            android:hint="Votre identifiant permanent"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#9C27B0"
+            android:textColorHint="#4CAF50"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="260dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="NOM:"
+            android:textSize="20dp"
+            android:layout_marginLeft="45dp"
+            android:textColor="#4CAF50"
+            android:textColorHint="#4CAF50"
+            android:typeface="serif">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/nom_inscription"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:ems="10"
+            android:hint="Nom Etudiant"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#9C27B0"
+            android:textColorHint="#4CAF50"
+            android:textSize="11sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="315dp">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="PRENOMS:"
+            android:textSize="20dp"
+            android:layout_marginLeft="45dp"
+            android:textColor="#4CAF50"
+            android:textColorHint="#4CAF50"
+            android:typeface="serif">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/prenoms_inscription"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:ems="10"
+            android:hint="Prenoms Etudiant"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#9C27B0"
+            android:textColorHint="#4CAF50"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="360dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe:"
+            android:textSize="20dp"
+            android:textColor="#4CAF50"
+            android:textColorHint="#4CAF50"
+            android:layout_marginLeft="50dp"
+            android:typeface="serif">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/mdp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:backgroundTint="#FF9800"
+            android:ems="10"
+            android:textColor="#4CAF50"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="405dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmation Mot de passe:"
+            android:textSize="10dp"
+            android:textColor="#4CAF50"
+            android:textColorHint="#4CAF50"
+            android:layout_marginLeft="50dp"
+            android:typeface="serif">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/mdp_confirmation"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:backgroundTint="#FF9800"
+            android:ems="10"
+            android:textColor="#009688"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="95dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/best_profil_round"
+        />
+
+
+    <Button
+        android:id="@+id/ok_valider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="S'inscription"
+        android:layout_marginTop="459dp"
+        android:layout_marginLeft="105dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="501dp">
+        <TextView
+            android:id="@+id/demande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:text="Déjà inscri?"
+            android:textColor="#FF9800"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_marginLeft="45dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/deja_inscri_connecter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Se connecter"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#F44336"
+            android:textSize="14dp"
+            android:layout_marginLeft="80dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

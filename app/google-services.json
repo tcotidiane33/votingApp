@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289535040383",
+    "project_id": "election-de-delegue",
+    "storage_bucket": "election-de-delegue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289535040383:android:a66eac3dbbe813d2d0184a",
+        "android_client_info": {
+          "package_name": "com.example.election_de_delegue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289535040383-snvjqeb5rb7bftj1up0iqi4gh99shrj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD13Pj3GWmKYQ_MrgfvVBFFQ1LQ0XcEqnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289535040383-snvjqeb5rb7bftj1up0iqi4gh99shrj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

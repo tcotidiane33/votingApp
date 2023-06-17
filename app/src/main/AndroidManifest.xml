@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Election_de_delegue"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".Confirmation_vote"
+            android:exported="false" />
+        <activity
+            android:name=".description_candidat"
+            android:exported="false" />
+        <activity
+            android:name=".inscription_app"
+            android:exported="false" />
+        <activity
+            android:name=".activite_master2"
+            android:exported="false" />
+        <activity
+            android:name=".activite_master1"
+            android:exported="false" />
+        <activity
+            android:name=".activite_licence3"
+            android:exported="false" />
+        <activity
+            android:name=".activite_licence2"
+            android:exported="false" />
+        <activity
+            android:name=".troisieme_activite"
+            android:exported="false"
+            android:label="@string/title_activity_troisieme_activite"
+            android:theme="@style/Theme.Election_de_delegue" />
         <activity
             android:name=".deuxieme_activite"
             android:exported="false"
@@ -21,7 +47,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Election_de_delegue" >
+            android:theme="@style/Theme.Election_de_delegue">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
