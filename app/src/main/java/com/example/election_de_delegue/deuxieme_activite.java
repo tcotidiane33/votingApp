@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
@@ -26,7 +27,7 @@ import com.example.election_de_delegue.databinding.ActivityDeuxiemeActiviteBindi
 
 public class deuxieme_activite extends AppCompatActivity {
     private final static int TROISEME_CALL_ACTIVITY = 1234;
-
+    private TextView nom_utilisateur;
     private Button licence1;
     private Button licence2;
     private Button licence3;
@@ -39,12 +40,20 @@ public class deuxieme_activite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deuxieme_activite);
-
+        nom_utilisateur = (TextView) findViewById(R.id.nom_utilisateur);
         licence1 = (Button) findViewById(R.id.licence1);
         licence2 = (Button) findViewById(R.id.licence2);
         licence3 = (Button) findViewById(R.id.licence3);
         master1 = (Button) findViewById(R.id.master1);
         master2 = (Button) findViewById(R.id.master2);
+
+
+        Intent intent = getIntent(); // Récupérer l'intent qui a déclenché cette activité
+        String Nom_utilis = intent.getStringExtra("nom_utilisateur");
+        String Mail_utilis = intent.getStringExtra("mail_utilisateur");
+        TextView Nom_utilisateur = findViewById(R.id.nom_utilisateur);
+        Nom_utilisateur.setText(Nom_utilis);
+
 
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -54,6 +63,7 @@ public class deuxieme_activite extends AppCompatActivity {
                         if (result.getResultCode() == RESULT_OK) {
                             Intent data = result.getData();
                             // Traitez les données renvoyées par l'activité
+
                         }
                     }
                 });
@@ -62,6 +72,12 @@ public class deuxieme_activite extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(deuxieme_activite.this, troisieme_activite.class);
+                String Nom_utilisatueur = Nom_utilis;
+                String Mail_utilisateur = Mail_utilis;
+
+                intent.putExtra("nom_utilisateur", Nom_utilisatueur);
+                intent.putExtra("mail_utilisateur", Mail_utilisateur);
+
                 intent.putExtra("licence1", licence1.getText().toString());
                 intent.putExtra("licence2", licence2.getText().toString());
                 intent.putExtra("licence3", licence3.getText().toString());
@@ -76,6 +92,12 @@ public class deuxieme_activite extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(deuxieme_activite.this, activite_licence2.class);
+                String Nom_utilisatueur = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilisateur = intent.getStringExtra("mail_utilisateur");
+
+                intent.putExtra("nom_utilisateur", Nom_utilisatueur);
+                intent.putExtra("mail_utilisateur", Mail_utilisateur);
+
                 intent.putExtra("licence1", licence1.getText().toString());
                 intent.putExtra("licence2", licence2.getText().toString());
                 intent.putExtra("licence3", licence3.getText().toString());
@@ -90,6 +112,12 @@ public class deuxieme_activite extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(deuxieme_activite.this, activite_licence3.class);
+                String Nom_utilisatueur = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilisateur = intent.getStringExtra("mail_utilisateur");
+
+                intent.putExtra("nom_utilisateur", Nom_utilisatueur);
+                intent.putExtra("mail_utilisateur", Mail_utilisateur);
+
                 intent.putExtra("licence1", licence1.getText().toString());
                 intent.putExtra("licence2", licence2.getText().toString());
                 intent.putExtra("licence3", licence3.getText().toString());
@@ -105,6 +133,12 @@ public class deuxieme_activite extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(deuxieme_activite.this, activite_master1.class);
+                String Nom_utilisatueur = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilisateur = intent.getStringExtra("mail_utilisateur");
+
+                intent.putExtra("nom_utilisateur", Nom_utilisatueur);
+                intent.putExtra("mail_utilisateur", Mail_utilisateur);
+
                 intent.putExtra("licence1", licence1.getText().toString());
                 intent.putExtra("licence2", licence2.getText().toString());
                 intent.putExtra("licence3", licence3.getText().toString());
@@ -119,6 +153,12 @@ public class deuxieme_activite extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(deuxieme_activite.this, activite_master2.class);
+                String Nom_utilisatueur = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilisateur = intent.getStringExtra("mail_utilisateur");
+
+                intent.putExtra("nom_utilisateur", Nom_utilisatueur);
+                intent.putExtra("mail_utilisateur", Mail_utilisateur);
+
                 intent.putExtra("licence1", licence1.getText().toString());
                 intent.putExtra("licence2", licence2.getText().toString());
                 intent.putExtra("licence3", licence3.getText().toString());
@@ -128,6 +168,5 @@ public class deuxieme_activite extends AppCompatActivity {
                 launcher.launch(intent);
             }
         });
-
     }
 }

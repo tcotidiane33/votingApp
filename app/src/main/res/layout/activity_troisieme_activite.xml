@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="@mipmap/univ2"
     android:fitsSystemWindows="true"
     tools:context=".deuxieme_activite">
 
@@ -86,7 +86,8 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="418dp">
+        android:layout_marginTop="510dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,7 +106,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:id="@+id/champs_candidat">
+                    android:id="@+id/champs_candidat"
+                    >
 
                     <ViewFlipper
                         android:layout_width="match_parent"
@@ -123,10 +125,11 @@
                             >
                             <ImageView
                                 android:id="@+id/image_candidat"
-                                android:layout_width="250dp"
+                                android:layout_width="219dp"
                                 android:layout_height="250dp"
-                                android:background="#00D5D5D5"
-                                android:src="@mipmap/image0" />
+                                android:src="@mipmap/image0"
+                                android:layout_marginTop="-13dp"
+                               />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -137,7 +140,7 @@
                                     android:id="@+id/presentation_candidat"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="COuCOu, Je suis Adou Trésor"
+                                    android:text=" Adou Trésor"
                                     android:textSize="20dp"></TextView>
 
                                 <TextView

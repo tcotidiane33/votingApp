@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="@mipmap/univ4"
     android:fitsSystemWindows="true"
     tools:context=".description_candidat">
 
@@ -75,9 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="nom_candidat"
-            android:textSize="30dp"
+            android:textSize="35dp"
             android:textStyle="bold"
-            android:textColor="#FFC107"/>
+            android:textColor="#7A76F3"/>
 
         <TextView
             android:id="@+id/Slogant_candidat"
@@ -136,6 +136,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/progamme_candidat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao Akwabao!!!!"

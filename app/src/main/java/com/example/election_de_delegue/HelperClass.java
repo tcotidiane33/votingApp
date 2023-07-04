@@ -1,7 +1,7 @@
 package com.example.election_de_delegue;
 
 public class HelperClass {
-    String nom_inscription, prenoms_inscription, mdp, mdp_confirmation;
+    String nom_inscription, mail, mdp, mdp_confirmation;
 
     public String getNom_inscription() {
         return nom_inscription;
@@ -11,12 +11,12 @@ public class HelperClass {
         this.nom_inscription = nom_inscription;
     }
 
-    public String getPrenoms_inscription() {
-        return prenoms_inscription;
+    public String getmail() {
+        return mail;
     }
 
-    public void setPrenoms_inscription(String prenoms_inscription) {
-        this.prenoms_inscription = prenoms_inscription;
+    public void setmail(String mail) {
+        this.mail = mail;
     }
 
     public String getMdp() {
@@ -35,9 +35,9 @@ public class HelperClass {
         this.mdp_confirmation = mdp_confirmation;
     }
 
-    public HelperClass(String nom_inscription, String prenoms_inscription, String mdp, String mdp_confirmation) {
+    public HelperClass(String nom_inscription, String mail, String mdp, String mdp_confirmation) {
         this.nom_inscription = nom_inscription;
-        this.prenoms_inscription = prenoms_inscription;
+        this.mail = mail;
         this.mdp = mdp;
         this.mdp_confirmation = mdp_confirmation;
     }

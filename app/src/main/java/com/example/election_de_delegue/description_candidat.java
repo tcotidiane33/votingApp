@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -13,9 +14,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Objects;
 
 
 public class description_candidat extends AppCompatActivity {
+
+    FirebaseDatabase database;
+
+    DatabaseReference reference;
     private TextView Nom_candidat;
     private ImageView image_candidat;
     private TextView Slogant_candidat;
@@ -37,6 +52,8 @@ public class description_candidat extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             int imageResourceId = intent.getIntExtra("image_candidat", 0);
+            String Nom_utilis = intent.getStringExtra("nom_utilisateur");
+            String Mail_utilis = intent.getStringExtra("mail_utilisateur");
             String Nom_cand = intent.getStringExtra("presentation_candidat");
             String Slogan_cand = intent.getStringExtra("discour_candidat");
             String Voix1 = intent.getStringExtra("voix");
@@ -49,7 +66,7 @@ public class description_candidat extends AppCompatActivity {
             Nom_candidat.setText(Nom_cand);
 
             TextView Slogan_candidat = findViewById(R.id.Slogant_candidat);
-            Slogan_candidat.setText(Slogan_cand);
+            Slogan_candidat.setText(Mail_utilis);
 
         }
 
@@ -69,16 +86,47 @@ public class description_candidat extends AppCompatActivity {
         voter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = getIntent();
 
-                TextView Voix = findViewById(R.id.voix);
-                String voix = Voix.getText().toString().trim();
-                int voixdb = Integer.parseInt(voix);
-                int score = 0;
-                Context description_candidat;
-                launcher.launch(intent);
+                String Nom_utilis = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilis = intent.getStringExtra("mail_utilisateur");
 
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("votant");
+                Query checkUserDatabase = reference.orderByChild("nom_inscription").equalTo(Nom_utilis);
+
+                checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            Toast.makeText(description_candidat.this, "Désolé, vous avez déjà voté, merci.", Toast.LENGTH_SHORT).show();
+                        } else {
+                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("votant");
+
+                            String nom_inscription = intent.getStringExtra("nom_utilisateur");
+                            String mail = intent.getStringExtra("mail_utilisateur");
+                            String nom_candidat = intent.getStringExtra("presentation_candidat");
+                            Integer Vote = 1;
+
+                            intent.putExtra("nom_utilisateur", nom_inscription);
+                            intent.putExtra("mail_utilisateur", mail);
+
+                            HlpherClassVote helperClass = new HlpherClassVote(nom_inscription, mail, Vote, nom_candidat);
+                            reference.child(nom_inscription).setValue(helperClass);
+
+                            Toast.makeText(description_candidat.this, "Vous avez voté avec succès!", Toast.LENGTH_SHORT).show();
+
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        // Gérer l'annulation ici
+                    }
+                });
             }
         });
+
 
         statistique.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +137,5 @@ public class description_candidat extends AppCompatActivity {
                 launcher.launch(intent);
             }
         });
-
     }
 }

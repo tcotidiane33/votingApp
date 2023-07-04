@@ -32,6 +32,7 @@ public class troisieme_activite extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityTroisiemeActiviteBinding binding;
 
+    private TextView but_niveau;
     private ImageView image_candidat;
     private ImageView image_candidat1;
 
@@ -56,11 +57,19 @@ public class troisieme_activite extends AppCompatActivity {
         deuxieme_image_candidat = (ImageView) findViewById(R.id.deuxieme_image_candidat);
         deuxieme_image_candidat1 = (ImageView) findViewById(R.id.deuxieme_image_candidat1);
         presentation_candidat = (TextView) findViewById(R.id.presentation_candidat);
+        but_niveau = (TextView) findViewById(R.id.but_niveau);
         deuxieme_presentation_candidat = (TextView) findViewById(R.id.deuxieme_presentation_candidat);
         discour_candidat = (TextView) findViewById(R.id.discour_candidat);
         deuxieme_discour_candidat = (TextView) findViewById(R.id.deuxieme_discour_candidat);
         champ_candidat = (LinearLayout) findViewById(R.id.champs_candidat);
         champ_candidat_2 = (LinearLayout) findViewById(R.id.champs_candidat_2);
+
+
+        Intent intent = getIntent(); // Récupérer l'intent qui a déclenché cette activité
+        String Nom_utilis = intent.getStringExtra("nom_utilisateur");
+        String Mail_utilis = intent.getStringExtra("mail_utilisateur");
+        TextView Nom_utilisateur = findViewById(R.id.but_niveau);
+        Nom_utilisateur.setText(Nom_utilis);
 
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -79,6 +88,13 @@ public class troisieme_activite extends AppCompatActivity {
             public void onClick(View v) {
                 int imageResourceId = R.mipmap.image0_foreground;
                 Intent intent = new Intent(troisieme_activite.this, description_candidat.class);
+
+                String Nom_utilisateur = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilisateur = intent.getStringExtra("mail_utilisateur");
+
+                intent.putExtra("nom_utilisateur", Nom_utilis);
+                intent.putExtra("mail_utilisateur", Mail_utilis);
+
                 intent.putExtra("image_candidat", imageResourceId);
                 intent.putExtra("presentation_candidat", presentation_candidat.getText().toString());
                 intent.putExtra("discour_candidat", discour_candidat.getText().toString());
@@ -93,6 +109,13 @@ public class troisieme_activite extends AppCompatActivity {
             public void onClick(View v) {
                 int imageResourceId = R.mipmap.image1_foreground;
                 Intent intent = new Intent(troisieme_activite.this, description_candidat.class);
+
+                String Nom_utilisatueur = intent.getStringExtra("nom_utilisateur");
+                String Mail_utilisateur = intent.getStringExtra("mail_utilisateur");
+
+                intent.putExtra("nom_utilisateur", Nom_utilisatueur);
+                intent.putExtra("mail_utilisateur", Mail_utilisateur);
+
                 intent.putExtra("image_candidat", imageResourceId);
                 intent.putExtra("presentation_candidat", deuxieme_presentation_candidat.getText().toString());
                 intent.putExtra("discour_candidat", deuxieme_discour_candidat.getText().toString());

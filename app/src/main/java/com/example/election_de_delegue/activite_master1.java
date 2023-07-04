@@ -12,3 +12,4 @@ public class activite_master1 extends AppCompatActivity {
         setContentView(R.layout.activity_activite_master1);
     }
 }
+

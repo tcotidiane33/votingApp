@@ -45,4 +45,5 @@
     </string>
     <string name="title_activity_deuxieme_activite">deuxieme_activite</string>
     <string name="title_activity_troisieme_activite">troisieme_activite</string>
+    <string name="title_activity_statistique_vote">Statistique_vote</string>
 </resources>
