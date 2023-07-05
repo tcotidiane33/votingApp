@@ -16,33 +16,35 @@
     <ImageView
         android:id="@+id/iphone"
         android:layout_width="match_parent"
-        android:layout_height="780dp"
-        android:scaleType="fitXY"
-        android:src="@mipmap/cinqetudiants_foreground"
-        android:layout_marginTop="0dp" />
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@color/material_on_surface_emphasis_medium"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"/>
+
+
     <ImageView
         android:id="@+id/connexion_image"
         android:layout_width="match_parent"
-        android:layout_height="450sp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="25dp"
-        android:scaleType="fitXY"
+        android:layout_height="420sp"
+        android:layout_alignTop="@+id/nom"
         android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="-75dp"
+        android:layout_marginRight="25dp"
         android:background="@drawable/connexion_image_background"
-       />
+        android:scaleType="fitXY" />
 
     <ImageView
         android:id="@+id/profil_image"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        android:layout_marginTop="150dp"
-        android:scaleType="fitXY"
+        android:layout_height="440dp"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="45dp"
+        android:scaleType="fitXY" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,11 +56,13 @@
         <TextView
             android:id="@+id/size"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginBottom="100px"
             android:layout_gravity="center"
             android:layout_marginTop="1dp"
             android:text="NOTRE DELEGUE"
-            android:textColor="#FF9800"
+            android:textColor="#FFF"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
             android:textSize="34sp"
             android:textStyle="bold"
             android:typeface="serif">
@@ -70,11 +74,11 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="120dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginLeft="95dp"
+        android:radius="26dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/best_profil_round"
-        />
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="115dp"
+        android:src="@mipmap/best_profil_round" />
 
     <ImageView
         android:layout_width="50dp"
@@ -113,7 +117,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-411dp"
+        android:layout_alignTop="@+id/profil_image"
         android:orientation="horizontal">
 
         <CheckBox
@@ -121,77 +125,108 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="42dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="200dp"
             android:text="se souvenir de moi"
             android:textColor="#4CAF50"
             android:textColorHint="#FBFBFB" />
-
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profil_image"
+        android:orientation="horizontal">
         <Button
             android:id="@+id/forget"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-15dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginRight="0dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            android:backgroundTint="#FFFFFF"
             android:text="Mot de passe oublié"
             android:textColor="#03A9F4"
             android:textSize="12dp" />
 
+
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/mdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="105dp"
-        android:layout_marginTop="305dp"
-        android:backgroundTint="#009688"
-        android:ems="10"
-        android:textColor="#009688"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/valider"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Connexion"
-        android:layout_marginTop="450dp"
-        android:layout_marginLeft="105dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignTop="@+id/profil_image"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/inscrir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="S'inscrir"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="#F44336"
-        android:textSize="14dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="490sp"/>
+        <TextView
+            android:id="@+id/demande"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="230dp"
+            android:background="#00FFFFFF"
+            android:text="Pas encore Inscris ?"
+            android:textColor="#03A9F4"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:orientation="horizontal">
+
+        </TextView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="502dp">
-    <TextView
-        android:id="@+id/demande"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="1dp"
-        android:text="Pas encore inscrir?"
-        android:textColor="#FF9800"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-        android:layout_marginLeft="45dp">
+        android:layout_alignTop="@+id/profil_image"
+        android:orientation="horizontal">
 
-    </TextView>
-
+        <EditText
+            android:id="@+id/mdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="155dp"
+            android:backgroundTint="#009688"
+            android:ems="10"
+            android:textColor="#229954"
+            android:inputType="textPassword" />
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profil_image"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/valider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connexion"
+            android:layout_marginTop="275dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="489dp">
+
+        <Button
+            android:id="@+id/inscrir"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="S'inscrire"
+            android:background="#00FFFFFF"
+            android:textColor="#FF9800"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
 </RelativeLayout>
