@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="780dp"
         android:scaleType="fitXY"
-        android:src="@mipmap/cinqetudiants_foreground"
+        android:src="@color/black"
         android:layout_marginTop="0dp" />
     <ImageView
         android:id="@+id/connexion_image"
@@ -58,7 +58,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="1dp"
             android:text="ELECTION  DELEGUE"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
             android:textSize="34sp"
             android:textStyle="bold"
             android:typeface="serif">
@@ -248,7 +249,7 @@
         android:id="@+id/ok_valider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="S'inscription"
+        android:text="Connexion"
         android:layout_marginTop="459dp"
         android:layout_marginLeft="105dp"
         android:layout_centerHorizontal="true"/>
@@ -264,7 +265,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="1dp"
-            android:text="Déjà inscri?"
+            android:text="Déjà inscris ?"
             android:textColor="#FF9800"
             android:textSize="14sp"
             android:textStyle="bold"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/univ2"
+    android:background="#FFFFFF"
     android:fitsSystemWindows="true"
     tools:context=".deuxieme_activite">
 
@@ -22,9 +22,9 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginLeft="330dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="300dp"
         android:layout_marginTop="-19dp"
         android:background="#00D5D5D5"
         android:src="@mipmap/logo_ufr_round" />
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Licence1"
+            android:text="Licence 1"
             android:textColor="#8BC34A"
             android:textSize="50dp"
             android:textStyle="bold"
@@ -72,25 +72,25 @@
             android:id="@+id/niveau_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Licence1" />
+            android:layout_weight="20"
+            android:text="Election du Délégué de la Licence 1 " />
 
         <TextView
             android:id="@+id/but_niveau"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
+            android:layout_weight="15"
+            android:text="créer un environnement routier plus sûr et plus efficient." />
     </LinearLayout>
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="250dp"
-        android:layout_marginTop="510dp"
-        >
+        android:layout_marginTop="510dp">
+
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -119,35 +119,42 @@
                         android:outAnimation="@android:anim/slide_out_right">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_width="350dp"
+                            android:layout_height="150dp"
                             android:orientation="horizontal"
+                            android:layout_gravity="center"
                             >
+
                             <ImageView
                                 android:id="@+id/image_candidat"
-                                android:layout_width="219dp"
-                                android:layout_height="250dp"
-                                android:src="@mipmap/image0"
-                                android:layout_marginTop="-13dp"
-                               />
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:src="@mipmap/image0" />
 
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="180dp"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
                                 <TextView
                                     android:id="@+id/presentation_candidat"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="180dp"
+                                    android:layout_marginLeft="10dp"
                                     android:layout_height="match_parent"
                                     android:text=" Adou Trésor"
-                                    android:textSize="20dp"></TextView>
+                                    android:textSize="20dp">
+
+                                </TextView>
 
                                 <TextView
                                     android:id="@+id/discour_candidat"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="170dp"
                                     android:layout_height="match_parent"
                                     android:layout_marginTop="08dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:text="COuCOu, Je suis Adou Trésor"
                                     android:textSize="15dp">
 
@@ -155,26 +162,34 @@
                             </LinearLayout>
                         </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="250dp"
-                                android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="260dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            >
 
                                 <ImageView
                                     android:id="@+id/image_candidat1"
-                                    android:layout_width="250dp"
-                                    android:layout_height="250dp"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
                                     android:background="#00D5D5D5"
                                     android:src="@mipmap/image2_foreground" />
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                >
 
                                 <TextView
                                     android:id="@+id/presentation_candidat1"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="260dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:text="Hola!, Je suis Aimé Trésor Adou"
                                     android:textSize="20dp">
 
@@ -182,8 +197,10 @@
 
                                 <TextView
                                     android:id="@+id/discour_candidat1"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:layout_marginTop="08dp"
                                     android:text="COuCOu, Je suis Adou Trésor"
                                     android:textSize="15dp">
@@ -223,34 +240,38 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="150dp"
                             android:orientation="horizontal"
                             >
 
 
                             <ImageView
                                 android:id="@+id/deuxieme_image_candidat"
-                                android:layout_width="250dp"
-                                android:layout_height="250dp"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
                                 android:background="#00D5D5D5"
                                 android:src="@mipmap/image1" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="180dp"
                                 android:orientation="vertical">
 
                                 <TextView
                                     android:id="@+id/deuxieme_presentation_candidat"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="AKwaBa, Je suis Kouadio Adou"
-                                    android:textSize="20dp"></TextView>
+                                    android:textSize="20dp">
+
+                                </TextView>
 
                                 <TextView
                                     android:id="@+id/deuxieme_discour_candidat"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:layout_marginTop="08dp"
                                     android:text="Mon équipe dynamique et professionnelle"
                                     android:textSize="15dp">
@@ -262,6 +283,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
                             android:orientation="horizontal">
 
                             <LinearLayout
@@ -271,14 +294,18 @@
 
                                 <ImageView
                                     android:id="@+id/deuxieme_image_candidat1"
-                                    android:layout_width="250dp"
-                                    android:layout_height="250dp"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:background="#00D5D5D5"
                                     android:src="@mipmap/image1" />
 
                                 <TextView
                                     android:id="@+id/deuxieme_presentation_candidat1"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:layout_height="match_parent"
                                     android:text="Ayo!, Je suis DiGbeu Isidor."
                                     android:textSize="20dp">
@@ -287,8 +314,10 @@
 
                                 <TextView
                                     android:id="@+id/deuxieme_discour_candidat1"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:layout_marginTop="08dp"
                                     android:text="Voici, ce que je compte faire pour vous."
                                     android:textSize="15dp">

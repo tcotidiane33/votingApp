@@ -57,6 +57,7 @@
             android:id="@+id/iphone"
             android:layout_width="match_parent"
             android:layout_height="270dp"
+            android:layout_marginTop="10dp"
 
             android:scaleType="fitXY"
             android:src="@mipmap/image2_foreground" />
@@ -72,6 +73,7 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Licence 2" />
@@ -123,9 +125,10 @@
 
 
                             <ImageView
-                                android:layout_width="250dp"
-                                android:layout_height="250dp"
-                                android:background="#00D5D5D5"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
                                 android:src="@mipmap/image0" />
 
                             <LinearLayout
@@ -161,9 +164,10 @@
                                 android:orientation="horizontal">
 
                                 <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="250dp"
-                                    android:background="#00D5D5D5"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="1dp"
                                     android:src="@mipmap/image2_foreground" />
 
                                 <TextView
