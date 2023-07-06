@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#3F51B5" />
+            android:background="#274B94" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -26,7 +26,7 @@
         android:layout_height="90dp"
         android:layout_marginLeft="330dp"
         android:layout_marginTop="-19dp"
-        android:background="#1E8449"
+        android:background="#11FF00"
         android:src="@mipmap/logo_ufr_round" />
 
     <LinearLayout
